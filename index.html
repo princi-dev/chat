@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App misy Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FIZARANA FIDIRANA / LOGIN -->
+    <div id="authArea" class="auth-container">
+        <h2>Fidirana (Login)</h2>
+        <input type="email" id="email" placeholder="Mailaka (Email)">
+        <input type="password" id="password" placeholder="Teny miafina (Password)">
+        <button onclick="handleLogin()">Hiditra</button>
+        <p style="text-align:center; font-size: 12px; color: #666; margin-top: 15px;">
+            Ireo mailaka nahazo alalana ihany no afaka miditra.
+        </p>
+    </div>
+
+    <!-- FIZARANA RESAKA / CHAT -->
+    <div id="chatArea" class="chat-container hidden">
+        <div class="chat-header">
+            <span id="userDisplay">Resaka</span>
+            <button class="logout-btn" onclick="handleLogout()">Hivoaka</button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages"></div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Manatrà hafatra..." onkeydown="if(event.key === 'Enter') sendMsg()">
+            <button class="send-btn" onclick="sendMsg()">➔</button>
+        </div>
+    </div>
+
+    <!-- Mampiditra ny rakitra script.js ho karazana module -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
